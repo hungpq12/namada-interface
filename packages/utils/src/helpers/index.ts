@@ -252,7 +252,7 @@ export const mapUndefined = <A, B>(
 ): B | undefined => (a === undefined ? undefined : f(a));
 
 export const showMaybeNam = (maybeNam: BigNumber | undefined): string =>
-  mapUndefined((nam) => `${Tokens.NAM.symbol} ${nam.toString()}`, maybeNam) ??
+  mapUndefined((nam) => `${Tokens.NAM.symbol} ${nam.toFormat()}`, maybeNam) ??
   "-";
 
 export const isEmptyObject = (object: Record<string, unknown>): boolean => {
