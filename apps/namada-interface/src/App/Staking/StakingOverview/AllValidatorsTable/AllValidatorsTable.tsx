@@ -42,7 +42,7 @@ const AllValidatorsRowRenderer = (
           {truncateInMiddle(validator.name, 10, 16)}
         </TableLink>
       </td>
-      <td>{validator.votingPower?.toFormat() ?? ""}</td>
+      <td>{validator.votingPower?.div(1000000).toFormat() ?? ""}</td>
       <td>{formatPercentage(validator.commission)}</td>
     </>
   );

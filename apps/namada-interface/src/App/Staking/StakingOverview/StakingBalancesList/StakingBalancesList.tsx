@@ -64,7 +64,7 @@ export const StakingBalancesList: React.FC = () => {
     <StakingBalances>
       <StakingBalancesLabel>Available for bonding</StakingBalancesLabel>
       <StakingBalancesValue>
-        {Tokens.NAM.symbol} {availableForBonding.toString()}
+        {Tokens.NAM.symbol} {availableForBonding.toFormat()}
       </StakingBalancesValue>
 
       <StakingBalancesLabel>Total Bonded</StakingBalancesLabel>

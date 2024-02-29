@@ -129,6 +129,7 @@ const validatorToDataRows = (
   if (validator === undefined) {
     return [];
   }
+  console.log(validator.votingPower);
   return [
     { uuid: "1", key: "Name", value: truncateInMiddle(validator.name, 10, 12) },
     {
@@ -139,7 +140,7 @@ const validatorToDataRows = (
     {
       uuid: "3",
       key: "Voting Power",
-      value: validator.votingPower?.toString() ?? "",
+      value: validator.votingPower?.dividedBy(1000000).toFormat() ?? "",
     },
   ];
 };
